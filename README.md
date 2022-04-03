@@ -1,3 +1,3 @@
 # React/Redux image gallery
 
-Go see the [https://react-slider.herokuapp.com/](Demo)
+Go see the [Demo](https://react-slider.herokuapp.com/)

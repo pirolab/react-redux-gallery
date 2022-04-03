@@ -2,8 +2,10 @@
 
 Go see the [Demo](https://react-slider.herokuapp.com/)
 
-- react, redux
-- 
+- react, redux 
+- css animations 
+- ready to fetch data with custom Hook => useDataFetch(url)
+
 ### `npm start`
 
 Runs the app in the development mode.<br>

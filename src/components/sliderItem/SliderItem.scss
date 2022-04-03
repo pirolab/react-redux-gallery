@@ -226,8 +226,8 @@
 
   .right-image {
     width: 100%;
-    -webkit-animation: slide-in-right math.div($duration,2) math.div($duration,8) ease both;
-    animation: slide-in-right math.div($duration,2) math.div($duration,8) ease both;
+    -webkit-animation: slide-in-right math.div($duration,2) math.div($duration,30) ease both;
+    animation: slide-in-right math.div($duration,2) math.div($duration,30) ease both;
     @include isTablet {
       width: 50%;
       height: 45%;
@@ -245,8 +245,8 @@
   .left-image {
     opacity: 1;
     width: 100%;
-    -webkit-animation: slide-in-left math.div($duration,2) math.div($duration,8) ease both;
-    animation: slide-in-left math.div($duration,2) math.div($duration,8) ease both;
+    -webkit-animation: slide-in-left math.div($duration,2) math.div($duration,30) ease both;
+    animation: slide-in-left math.div($duration,2) math.div($duration,30) ease both;
     @include isTablet {
       width: 50%;
       height: 60%;

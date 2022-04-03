@@ -1,0 +1,60 @@
+@use "sass:math";
+@import 'src/sass/variables';
+@import 'src/sass/mediaQueries';
+@import "src/sass/animations";
+.button_cta {
+  text-decoration: none;
+  z-index: 4;
+  //font-style: italic;
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: absolute;
+  bottom: 84px;
+  left:20px;
+  opacity: 0;
+  background: $bg_btn;
+  padding: 1rem 1.5rem;
+  color: $white;
+  overflow: hidden;
+  width: calc(100% - 40px);
+  text-align: center;
+  box-shadow: 0 0 0 20px $nav_bg;
+  @include isTablet {
+    box-shadow: 2px 2px 2px rgb(0 0 0 /40%);
+    width: auto;
+    bottom: auto;
+    top: 44%;
+    outline:none;
+    left: 16%;
+  }
+  @include isLaptop {
+    top: auto;
+    bottom: 29%;
+    left: 20px;
+  }
+  span{
+    position: relative;
+    z-index: 2;
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: -5%;
+    width: 0;
+    height: 110%;
+    background: rgb( 0 0 0  /15%);
+    transform: skew(45deg,0);
+    transition: width math.div($duration,6);
+  }
+
+  &.isVisible {
+    -webkit-animation: fade-in-bottom math.div($duration,4) math.div($duration,2) $easeInOutBack both;
+    animation: fade-in-bottom math.div($duration,4) math.div($duration,2) $easeInOutBack both;
+  }
+
+  &:hover::after {
+    width:140%
+  }
+}

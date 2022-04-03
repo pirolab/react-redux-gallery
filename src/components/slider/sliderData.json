@@ -1,0 +1,74 @@
+[{
+    "bgImage": "./images/background.jpg",
+    "iconTrip": "./images/icon_rocket.png",
+    "logo": "./images/logo.png",
+    "imageRock": "./images/rock.jpg",
+    "imageRocket": "./images/rocket.png",
+    "title": "Visa to the Moon",
+    "subtitle": "Your trip start here",
+    "hash": "#moontrip #visamoon #moontickets",
+    "linkprev": "prev",
+    "linknext": "next",
+    "easeView": "view ease"
+},{
+    "bgImage": "./images/background_moon.png",
+    "iconTrip": "./images/icon_rocket.png",
+    "logo": "./images/logo.png",
+    "imageRock": "./images/rocket.png",
+    "imageRocket": "./images/rock.jpg",
+    "title": "Explore the surface",
+    "subtitle": "Your trip start here",
+    "hash": "#moontrip #visamoon #moontickets",
+    "linkprev": "prev",
+    "linknext": "next",
+    "easeView": "view ease"
+},{
+    "bgImage": "./images/background.jpg",
+    "iconTrip": "./images/icon_rocket.png",
+    "logo": "./images/logo.png",
+    "imageRock": "./images/rock.jpg",
+    "imageRocket": "./images/rocket.png",
+    "title": "Visa to the Moon",
+    "subtitle": "Your trip start here",
+    "hash": "#moontrip #visamoon #moontickets",
+    "linkprev": "prev",
+    "linknext": "next",
+    "easeView": "view ease"
+},{
+    "bgImage": "./images/background_moon.png",
+    "iconTrip": "./images/icon_rocket.png",
+    "logo": "./images/logo.png",
+    "imageRock": "./images/rocket.png",
+    "imageRocket": "./images/rock.jpg",
+    "title": "Explore the surface",
+    "subtitle": "Your trip start here",
+    "hash": "#moontrip #visamoon #moontickets",
+    "linkprev": "prev",
+    "linknext": "next",
+    "easeView": "view ease"
+},{
+    "bgImage": "./images/background.jpg",
+    "iconTrip": "./images/icon_rocket.png",
+    "logo": "./images/logo.png",
+    "imageRock": "./images/rock.jpg",
+    "imageRocket": "./images/rocket.png",
+    "title": "Visa to the Moon",
+    "subtitle": "Your trip start here",
+    "hash": "#moontrip #visamoon #moontickets",
+    "linkprev": "prev",
+    "linknext": "next",
+    "easeView": "view ease"
+},{
+    "bgImage": "./images/background_moon.png",
+    "iconTrip": "./images/icon_rocket.png",
+    "logo": "./images/logo.png",
+    "imageRock": "./images/rocket.png",
+    "imageRocket": "./images/rock.jpg",
+    "title": "Explore the surface",
+    "subtitle": "Your trip start here",
+    "hash": "#moontrip #visamoon #moontickets",
+    "linkprev": "prev",
+    "linknext": "next",
+    "easeView": "view ease"
+}
+]

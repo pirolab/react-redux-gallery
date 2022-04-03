@@ -1,0 +1,110 @@
+@import "src/sass/variables";
+@import 'src/sass/mediaQueries';
+
+.slider-nav {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  background: #212834;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  z-index: 5;
+  padding-top: 10px;
+  @include isTablet {
+    width: 50%;
+    height: 200px;
+    bottom:23%;
+    right:auto;
+    left: 0;
+    padding-top:0;
+  }
+  @include isLaptop {
+    width: 350px;
+    height: 300px;
+    bottom: -70px;
+    left: auto;
+    right: 28%;
+    padding-top:0;
+  }
+  @include isDesktop{
+    width: 20%;
+  }
+  .image-count {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .8rem;
+    color: #3c485c;
+    font-weight: 700;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 22;
+    @include isTablet {
+      top: 1rem;
+      right: 1rem;
+    }
+  }
+
+  &-prev,
+  &-next {
+    position: relative;
+    padding: 1rem 0;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    color: $white;
+    transition: letter-spacing $duration/6;
+    @include isTablet {
+      top:-40px;
+      margin-bottom: 30px;
+    }
+    &:hover {
+      color: $light_green;
+      letter-spacing: 1.2px;
+    }
+  }
+  .bullet-nav{
+    list-style-type: none;
+    margin: 0;
+    position: absolute;
+    background: rgba(2, 18, 26, 0.3);
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 2;
+    border-radius: 30px;
+    padding: 10px;
+    display: none;
+    @include isTablet{
+      display: flex;
+      bottom: 20px;
+    }
+    @include isLaptop{
+      display: flex;
+      bottom: 10px;
+    }
+    &-item{
+      width: 20px;
+      height: 20px;
+      background: $nav_bg;
+      border-radius: 30px;
+      cursor: pointer;
+      margin: 0 9px;
+      transition: transform .3s , background .3s;
+      &:hover{
+        background: $white;
+      }
+      &.isActive{
+        background: $light_green;
+        transform: scale(130%);
+      }
+
+    }
+  }
+}

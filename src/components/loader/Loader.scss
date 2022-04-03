@@ -1,0 +1,22 @@
+@use "sass:math";
+@import "src/sass/variables";
+@import "src/sass/animations";
+.loader {
+  width: 65%;
+  height: 2px;
+  background: $white;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    background: $light_green;
+  }
+  &.isLoading{
+    &::after{
+      -webkit-animation: loader math.div($duration,1.1) $easeInOutCirc both;
+      animation: loader math.div($duration,1.1) $easeInOutCirc both;
+    }
+  }
+}

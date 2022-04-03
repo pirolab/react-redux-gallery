@@ -1,0 +1,286 @@
+@use "sass:math";
+@import "src/sass/variables";
+@import "src/sass/mediaQueries";
+@import "src/sass/animations";
+
+.slider-item {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 auto;
+
+  &.hidden {
+    visibility: hidden;
+    max-width: 0;
+  }
+
+  &--bg {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    left: 0;
+    opacity: 0;
+    @include isLaptop {
+      left: 26%;
+    }
+    @include isMobile{
+      display: none;
+    }
+  }
+  .left-image,
+  .right-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+  }
+  .left-image{
+    @include isMobile {
+      height: calc( 75% - 64px);
+      top: auto;
+      bottom: 64px;
+    }
+  }
+  .right-image {
+    left: auto;
+    top: 0;
+    right: 0;
+    height: 25%;
+  }
+
+  .rocket_block {
+    position: absolute;
+    z-index: 3;
+    top: 25%;
+    right: 0;
+    width: 100%;
+    height:calc(75% - 64px);
+    opacity: 0;
+    padding: 0 0 30px 0;
+    text-align: center;
+    background: $dark_green_alpha;
+    @include isTablet{
+      background: $dark_green;
+      width: 50%;
+      top: 0;
+      padding: 0;
+      text-align: left;
+      height: 55%;
+    }
+    @include isLaptop {
+      left: 32%;
+      width: 40%;
+      background: $dark_green_alpha;
+      height: calc(100% - 230px);
+    }
+    @include isDesktop{
+      width: 20%;
+    }
+    &-wrapper{
+      position: relative;
+      top: 8%;
+      padding: 0 20px;
+      @include isTablet{
+        top:20%;
+        padding:0 0 0 20px;
+        text-align: left;
+      }
+      @include isLaptop{
+        top: 165px;
+      }
+      &-subtitle {
+        font-family: 'Montserrat', sans-serif;
+        position: relative;
+        padding:0 10px 10px 10px;
+        margin: 0;
+        font-size: 1.4rem;
+        width: auto;
+        left: 0;
+        color: $white;
+        @include isTablet{
+          padding:0 0 10px 0;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 25%;
+          height: 4px;
+          background: $dark_green;
+          @include isTablet{
+            left: 0;
+            transform: translateX(0);
+          }
+        }
+      }
+      &-hash {
+        position: relative;
+        font-style: italic;
+        text-align: center;
+        top: 20px;
+        @include isTablet{
+          text-align: left;
+        }
+        span {
+          color: $white;
+          font-size: 1rem;
+          font-weight: 700;
+          padding:0 20px 0 0;
+          @include isTablet{
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+
+  }
+
+  .slider-grid {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1140px;
+    height: 100%;
+    z-index: 4;
+
+    .logo {
+      top: 20px;
+      left: calc(50% - 65px);
+      width: 110px;
+      height: 110px;
+      z-index: 2;
+      opacity: 0;
+      position: absolute;
+      @include isTablet {
+        top: 7%;
+        left: 16%;
+        width: 160px;
+        height: 160px;
+      }
+      @include isLaptop {
+        top: 16.5%;
+        left: 20px;
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    .title {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1;
+      font-size: 2rem;
+      letter-spacing: -1px;
+      font-weight: 700;
+      position: absolute;
+      bottom: 180px;
+      left: 0;
+      text-align: center;
+      width: 100%;
+      margin:0;
+      opacity: 0;
+      color: white;
+      padding: 0 10px;
+      text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+      @include isTablet {
+        width: auto;
+        text-align: left;
+        font-size: 3.5rem;
+        bottom: auto;
+        top: 30%;
+        left: 16%;
+      }
+      @include isLaptop {
+        font-size: 4.5rem;
+        top:45%;
+        left: 20px;
+      }
+    }
+  }
+}
+
+
+/** animated elements **/
+
+.slider-item.isVisible{
+
+  .slider-item--bg {
+    -webkit-animation: fade-in math.div($duration,2) math.div($duration,4) linear both;
+    animation: fade-in math.div($duration,2) math.div($duration,4) linear both;
+    width: 100%;
+    height: 100%;
+    @include isLaptop {
+      height: calc(100vh - 70px);
+      width: 70%;
+    }
+  }
+
+  .right-image {
+    width: 100%;
+    -webkit-animation: slide-in-right math.div($duration,2) math.div($duration,8) ease both;
+    animation: slide-in-right math.div($duration,2) math.div($duration,8) ease both;
+    @include isTablet {
+      width: 50%;
+      height: 45%;
+      top: auto;
+      bottom: 0;
+    }
+    @include isLaptop {
+      width: 28%;
+      top: 0;
+      bottom: auto;
+      height: calc(100% - 230px);
+    }
+  }
+
+  .left-image {
+    opacity: 1;
+    width: 100%;
+    -webkit-animation: slide-in-left math.div($duration,2) math.div($duration,8) ease both;
+    animation: slide-in-left math.div($duration,2) math.div($duration,8) ease both;
+    @include isTablet {
+      width: 50%;
+      height: 60%;
+    }
+    @include isLaptop {
+      width: 32%;
+      height: 100%;
+    }
+  }
+
+  .title{
+    -webkit-animation: fade-in-right math.div($duration,2) math.div($duration,4) $easeInOutBack both;
+    animation: fade-in-right math.div($duration,2) math.div($duration,4) $easeInOutBack both;
+  }
+
+  .logo {
+    -webkit-animation: fade-in-top math.div($duration,2) math.div($duration,4) $easeInOutBack both;
+    animation: fade-in-top math.div($duration,2) math.div($duration,4) $easeInOutBack both;
+  }
+
+  .rocket_block {
+    -webkit-animation: fade-in math.div($duration,4) math.div($duration,2)  linear both;
+    animation: fade-in math.div($duration,4) math.div($duration,2)  linear both;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+

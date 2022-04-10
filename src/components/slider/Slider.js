@@ -34,7 +34,7 @@ const Slider = () => {
                     />
                 </React.Fragment>
             ) : (
-                <h1>Data not available</h1>
+                <span className="main_loader"/>
             )}
         </div>
     );

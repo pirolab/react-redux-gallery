@@ -20,3 +20,25 @@
     padding: 0;
   }
 }
+
+.main_loader{
+  display: block;
+  position: relative;
+  height: 10px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.28);
+  overflow: hidden;
+}
+.main_loader:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: $light_green;
+  animation: 6s prog ease-in infinite;
+}
+@keyframes prog {
+  to  {   width: 100%;}
+}

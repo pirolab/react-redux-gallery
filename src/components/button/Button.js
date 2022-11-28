@@ -6,7 +6,7 @@ const  Button = (props) => {
 
     return (
         <a href={cta} target="_blank" rel="noreferrer"  className={i === currentSlide ? "button_cta isVisible" : "button_cta "}>
-            <span>Start your trip ></span>
+            <span>Start your trip ⯈</span>
         </a>
     );
 }

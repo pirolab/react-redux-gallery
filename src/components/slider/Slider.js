@@ -1,6 +1,6 @@
 import React  from 'react';
 import {useSelector} from "react-redux";
-import useDataFetch from '../../services/ApiService';
+import {useDataFetch} from '../../services/ApiService';
 import Navigation from '../navigation/Navigation'
 import SliderItem from "../sliderItem/SliderItem";
 import './Slider.scss'
@@ -9,8 +9,8 @@ const Slider = () => {
     const navigation = useSelector(state => state.navigation);
     const {currentSlide} = navigation;
     const cta = 'https://it.wikipedia.org/wiki/Nikola_Tesla';
-    const [data] = useDataFetch('./sliderData.json');
-
+    const {data, error} = useDataFetch('./sliderData.json');
+    
     return (
         <div className="slider">
             {data && data.length > 0 ? (
@@ -34,7 +34,10 @@ const Slider = () => {
                     />
                 </React.Fragment>
             ) : (
-                <span className="main_loader"/>
+                <React.Fragment>
+                    <span className="main_loader"/>
+                    <div className='error_msg'>{error}</div>                    
+                </React.Fragment>
             )}
         </div>
     );

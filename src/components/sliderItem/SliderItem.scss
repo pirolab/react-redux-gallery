@@ -270,6 +270,13 @@
   .rocket_block {
     -webkit-animation: fade-in math.div($duration,4) math.div($duration,2)  linear both;
     animation: fade-in math.div($duration,4) math.div($duration,2)  linear both;
+    &-wrapper-subtitle {
+      -webkit-animation: slide-in-right math.div($duration,2) math.div($duration,3) ease both;
+      animation: slide-in-right math.div($duration,2) math.div($duration,3) ease both;    }
+    &-wrapper-hash {
+      -webkit-animation: slide-in-left math.div($duration,2) math.div($duration,3) ease both;
+      animation: slide-in-left math.div($duration,2) math.div($duration,3) ease both;
+    }
   }
 
 }

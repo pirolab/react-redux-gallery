@@ -37,7 +37,13 @@
   height: 100%;
   width: 0;
   background: $light_green;
-  animation: 6s prog ease-in infinite;
+  animation: 1s prog ease-in infinite;
+}
+.error_msg {
+  color: $white;
+  font-size: 1.2rem;
+  padding: 2rem;
+  text-align: center;
 }
 @keyframes prog {
   to  {   width: 100%;}

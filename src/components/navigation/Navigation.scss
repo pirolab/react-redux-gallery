@@ -57,7 +57,7 @@
     text-align: center;
     cursor: pointer;
     color: $white;
-    transition: letter-spacing $duration/6;
+    transition: letter-spacing calc($duration / 6);
     @include isTablet {
       top:-40px;
       margin-bottom: 30px;
